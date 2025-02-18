@@ -6,14 +6,13 @@
       "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path d=\"M10 50 Q 30 30, 50 40 Q 70 50, 50 60 Q 30 70, 10 50 Z\" fill=\"darkred\"/></svg>"
     ],
     "jumpscare": [
-        "<img src='catalien.jpg' alt='Spooky Jumpscare 1' class='jumpscare-image' />",
-        "<img src='erm.jpg' alt='Spooky Jumpscare 2' class='jumpscare-image' />",
-        "<img src='ohno.jpg' alt='Spooky Jumpscare 3' class='jumpscare-image' />",
-        "<img src='anguish.jpg' alt='Spooky Jumpscare 1' class='jumpscare-image' />",
-        "<img src='walker.jpg' alt='Spooky Jumpscare 2' class='jumpscare-image' />",
-        "<img src='ohh.jpg' alt='Spooky Jumpscare 2' class='jumpscare-image' />",
-        "<img src='evil-cat.gif' alt='Spooky Jumpscare 2' class='jumpscare-image' />",
-        "<img src='ohno.jpg' alt='Spooky Jumpscare 3' class='jumpscare-image' />"
+        "<img src='jpgs/catalien.jpg' alt='Spooky Jumpscare 1' class='jumpscare-image' />",
+        "<img src='jpgs/erm.jpg' alt='Spooky Jumpscare 2' class='jumpscare-image' />",
+        "<img src='jpgs/ohno.jpg' alt='Spooky Jumpscare 3' class='jumpscare-image' />",
+        "<img src='jpgs/anguish.jpg' alt='Spooky Jumpscare 4' class='jumpscare-image' />",
+        "<img src='jpgs/walker.jpg' alt='Spooky Jumpscare 5' class='jumpscare-image' />",
+        "<img src='jpgs/ohh.jpg' alt='Spooky Jumpscare 6' class='jumpscare-image' />",
+        "<img src='jpgs/evil-cat.gif' alt='Spooky Jumpscare 7' class='jumpscare-image' />"
     ],    
     "sentence1": [
         "#NounPerson# #VerbMotion# through the #NounLocation# as #NounFeeling# grips them.",
