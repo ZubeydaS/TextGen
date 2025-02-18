@@ -68,14 +68,14 @@
             animation: bloodDrip 1s ease-out infinite;
         }
 
-        .jumpscare-image {
+            .jumpscare-image {
             width: 400px; /* Set a fixed width */
             height: auto; /* Maintain aspect ratio */
             max-width: 100%; /* Ensure it doesn't overflow the container */
             display: block; /* Remove inline display issues */
             margin: 0 auto; /* Center the image */
         }
-        
+            
         /* Jumpscare Image Styles */
         #jumpscareContainer {
             display: none; /* Initially hidden */
@@ -96,7 +96,7 @@
             100% { opacity: 0.7; }
         }
 
-        footer {
+          footer {
             position: relative;
             margin-top: 100px; /* Adds space between footer and content */
             padding: 30px 0 10px;
@@ -154,12 +154,21 @@
                     }
                 }
 
-                function showJumpscare() {
-                    let generatedJumpscare = grammar.flatten("#jumpscare#");
-                    $("#jumpscareContainer").html(generatedJumpscare);
-                    triggerJumpscare();
-                }
+                // Randomly trigger the jumpscare after the story is displayed
+   //             triggerJumpscare();
 
+                // Generate content
+                generateText();
+                generateSVG();
+                triggerJumpscare();
+
+                // Optionally, regenerate the story every 5 seconds
+                setInterval(function() {
+                    generateText();
+                    generateSVG();
+                }, 5000);
+
+                // Function to trigger the jumpscare with flicker and short duration
                 function triggerJumpscare() {
                     setTimeout(function() {
                         // Show jumpscare with flicker and hold it for 0.5 seconds
@@ -172,21 +181,8 @@
                         setTimeout(function() {
                             $("#jumpscareContainer").html(""); // Clear the image
                         }, 1000); // Clear after it's gone
-                    }, Math.random() * 2000 + 9000); // Random delay between 9s to 11s
+                    }, Math.random() * 2000 + 9000); // Random delay between 10s to 15s
                 }
-
-                // Generate content and trigger jumpscare after a random interval
-                generateText();
-                generateSVG();
-                setTimeout(showJumpscare, Math.random() * 5000 + 5000); // Trigger jumpscare after 5-10 seconds
-
-                // Optionally, regenerate the story every 5 seconds
-                setInterval(function() {
-                    generateText();
-                    generateSVG();
-                    setTimeout(showJumpscare, Math.random() * 5000 + 5000); // Trigger jumpscare again
-                }, 5000);
-
             });
         });
     </script>
