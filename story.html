@@ -108,6 +108,15 @@
             margin-right: auto;
         }
 
+        /* SVG Holder for Image Generation */
+        #svgImage {
+            margin-top: 50px;
+            width: 80%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Blood drips effect (to enhance the horror feel) */
         .blood-drip {
             position: absolute;
@@ -187,11 +196,13 @@
     <p>Feel the terror, the dread, the unknown...</p>
     
     <div class="container">
+        <!-- Div to hold the generated SVG Image -->
+        <div id="svgImage"></div>
         <div id="output"></div>
     </div>
 
     <!-- Jumpscare Image (hidden initially) -->
-    <img id="jumpscare" src="catalien.jpg" alt="Spooky Jumpscare">
+  <!--  <img id="jumpscare" src="catalien.jpg" alt="Spooky Jumpscare"> -->
 
     <!-- Add some spooky blood drips -->
     <div class="blood-drip"></div>
@@ -209,16 +220,32 @@
                     // Display the generated story in the #output div
                     $("#output").html(generatedStory);
                 }
+                function generateSVG() {
+                    // Use the "image" rule to generate an SVG image
+                    let generatedSVG = grammar.flatten("#image#");
+                    // Display the generated SVG image in the #svgImage div
+                    $("#svgImage").html(generatedSVG);
+                }
+
+                function generateJumpscare() {
+                  // Use the "jumpscare" rule to generate a random jumpscare image
+                 let generatedJumpscare = grammar.flatten("#jumpscare#");
+                  // Display the generated jumpscare in the #jumpscare div
+                  $("#jumpscareContainer").html(generatedJumpscare);
+                }
                 // Randomly trigger the jumpscare after the story is displayed
                 triggerJumpscare();
 
                 // Generate the story immediately
                 generateText();
-                
+                generateSVG();                
                 // Optionally, regenerate the story every 2 seconds (you can remove this if not needed)
-                setInterval(generateText, 2000);
+
+                setInterval(function() {
+                    generateText();
+                    generateSVG();
+                }, 2000);
                 // Function to trigger the jumpscare
-                
                 function triggerJumpscare() {
                     setTimeout(function() {
                         // Display the jumpscare image after 3 seconds (adjust timing as needed)
