@@ -12,7 +12,7 @@
         "<img src='jpgs/anguish.jpg' alt='Spooky Jumpscare 4' class='jumpscare-image' />",
         "<img src='jpgs/walker.jpg' alt='Spooky Jumpscare 5' class='jumpscare-image' />",
         "<img src='jpgs/ohh.jpg' alt='Spooky Jumpscare 6' class='jumpscare-image' />",
-        "<img src='jpgs/evil-cat.gif' alt='Spooky Jumpscare 7' class='jumpscare-image' />"
+        "<img src='jpgs/evil-cat.jpg' alt='Spooky Jumpscare 7' class='jumpscare-image' />"
     ],    
     "sentence1": [
         "#NounPerson# #VerbMotion# through the #NounLocation# as #NounFeeling# grips them.",

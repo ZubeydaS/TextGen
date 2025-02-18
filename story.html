@@ -118,7 +118,6 @@
     <!-- Jumpscare Image (hidden initially) -->
     <div id="jumpscareContainer"></div> 
 
-
     <!-- Footer to display used texts -->
     <footer>
         <p id="textSources">Sources used in this generation:<br>♡ Dracula (published 1897) by Bram Stoker ♡<br>♡ Strange Case of Dr Jekyll and Mr Hyde* (published 1886) by Robert Louis Stevenson ♡<br>♡ Frankenstein (published 1818) by Mary Shelley ♡<br>♡ Carmilla (published 1872) by Sheridan Le Fanu ♡<br>♡ Grimm's Fairy Tales (published 1812) by Jacob Grimm and Wilhelm Grimm ♡</p>
@@ -132,7 +131,7 @@
                 function generateText() {
                     // Clear old content before generating new text
                     $("#output").html(""); 
-                    let generatedStory = grammar.flatten("#origin#");
+                    let generatedStory = grammar.flatten("#sentence1#");
                     $("#output").html(generatedStory);
                 }
 
@@ -180,6 +179,11 @@
                             .css("animation", "flicker 0.2s ease-in-out infinite") // Apply flicker
                             .delay(500) // Show for 0.5 seconds
                             .fadeOut(500); // Fade out after 0.5 seconds
+
+                        // Reset the jumpscare content after it fades out
+                        setTimeout(function() {
+                            $("#jumpscareContainer").html(""); // Clear the image
+                        }, 1000); // Clear after it's gone
                     }, Math.random() * 5000 + 10000); // Random delay between 10s to 15s
                 }
             });
