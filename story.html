@@ -154,6 +154,12 @@
                     }
                 }
 
+                function generateJumpscare() {
+                    let generatedJumpscare = grammar.flatten("#jumpscare#");
+                    $("#jumpscareContainer").html(generatedJumpscare);
+                    triggerJumpscare();
+                }
+
                 // Randomly trigger the jumpscare after the story is displayed
    //             triggerJumpscare();
 
