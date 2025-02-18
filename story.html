@@ -56,7 +56,7 @@
 </html>
 
 // https://zubeydas.github.io/TextGen/story.html
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -212,17 +212,18 @@
     <p>Feel the terror, the dread, the unknown...</p>
     
     <div class="container">
-        <!-- Div to hold the generated SVG Image -->
+         Div to hold the generated SVG Image 
         <div id="svgImage"></div>
         <div id="output"></div>
     </div>
-
+-->
     <!-- Jumpscare Image (hidden initially) -->
   <!--  <img id="jumpscare" src="catalien.jpg" alt="Spooky Jumpscare"> -->
+    <!--
   <div id="jumpscareContainer"></div> <!-- Make sure this div exists to hold the jumpscare image -->
 
     <!-- Add some spooky blood drips -->
-    <div class="blood-drip"></div>
+<!---    <div class="blood-drip"></div>
 
     <script>
         $(document).ready(function() {
@@ -278,6 +279,164 @@
                         // Display the jumpscare image after 3 seconds (adjust timing as needed)
                         $("#jumpscare").fadeIn(500).delay(1500).fadeOut(500);
                     }, Math.random() * 5000 + 2000); // Randomly show jumpscare between 2 to 7 seconds
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracery Horror Stories</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="tracery.min.js"></script>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Creepster', cursive;
+            background-color: #121212;
+            color: #f8f8f8;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+
+        #output {
+            font-size: 1.8em;
+            color: #fff;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            text-align: left;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blood-petal {
+            animation: rotateFall 4s ease-in-out infinite;
+            position: absolute;
+        }
+
+        /* Blood drips effect */
+        .blood-drip {
+            position: absolute;
+            bottom: 50;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #8b0000;
+            border-radius: 50%;
+            animation: bloodDrip 1s ease-out infinite;
+        }
+
+        /* Jumpscare Image Styles */
+        #jumpscare {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            z-index: 1000;
+        }
+
+        /* Jumpscare flicker effect */
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .container {
+            border: 3px solid rgba(255, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spooky Wooky Two Sentence Horror Stories</h1>
+    <p>Feel the terror, the dread, the unknown...</p>
+
+    <div class="container">
+        <div id="svgImage"></div>
+        <div id="output"></div>
+    </div>
+
+    <!-- Jumpscare Image (hidden initially) -->
+    <div id="jumpscareContainer"></div> 
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON("grammar.json", function(data) {
+                let grammar = tracery.createGrammar(data);
+
+                function generateText() {
+                    // Clear old content before generating new text
+                    $("#output").html(""); 
+                    let generatedStory = grammar.flatten("#origin#");
+                    $("#output").html(generatedStory);
+                }
+
+                function generateSVG() {
+                    // Clear old petals before generating new ones
+                    $("#svgImage").html("");
+                    let generatedSVG = grammar.flatten("#image#");
+
+                    // Randomize petal frequency (e.g., less frequent)
+                    let petalCount = Math.floor(Math.random() * 3) + 1; // Generate between 1 and 3 petals
+                    for (let i = 0; i < petalCount; i++) {
+                        let petal = $("<div>").html(generatedSVG).css({
+                            position: "absolute",
+                            top: `${Math.random() * 100}px`,
+                            left: `${Math.random() * 100}%`,
+                            animationDelay: `${Math.random() * 5}s` // Randomize animation delay
+                        });
+                        $("#svgImage").append(petal);
+                    }
+                }
+
+                function generateJumpscare() {
+                    let generatedJumpscare = grammar.flatten("#jumpscare#");
+                    $("#jumpscareContainer").html(generatedJumpscare);
+                }
+
+                // Randomly trigger the jumpscare after the story is displayed
+                triggerJumpscare();
+
+                // Generate content
+                generateText();
+                generateSVG();
+
+                // Optionally, regenerate the story every 5 seconds
+                setInterval(function() {
+                    generateText();
+                    generateSVG();
+                }, 5000);
+
+                // Function to trigger the jumpscare
+                function triggerJumpscare() {
+                    setTimeout(function() {
+                        $("#jumpscareContainer img").fadeIn(500).delay(1500).fadeOut(500); 
+                    }, Math.random() * 5000 + 2000); 
                 }
             });
         });
