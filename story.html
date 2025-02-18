@@ -176,7 +176,7 @@
 
                 // Function to trigger the jumpscare with flicker and short duration
                 function triggerJumpscare() {
-                    setTimeout(function() {
+                    setInterval(function() {
                         // Show jumpscare with flicker and hold it for 0.5 seconds
                         $("#jumpscareContainer").fadeIn(0) // Instant show
                             .css("animation", "flicker 0.2s ease-in-out infinite") // Apply flicker
