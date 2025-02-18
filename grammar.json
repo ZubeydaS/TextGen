@@ -1,0 +1,150 @@
+{
+    "origin": [
+        "#sentence1# #sentence2#"
+    ],
+    "sentence1": [
+        "#NounPerson# #VerbMotion# through the #NounLocation# as #NounFeeling# grips them.",
+        "The #NounAnimal# #VerbMotion# toward the #NounLocation#, leaving behind a trail of #NounSubstance#.",
+        "#NounPerson# #VerbCreation# a #AdjAll# #NounArtifact#, but it began to #VerbChange# in their hands."
+    ],
+    "sentence2": [
+        "Suddenly, #NounTime# struck, and #NounPerson# #VerbPossession# the #NounObject#.",
+        "#NounPerson# #VerbCommunication# in #NounCommunication#, but no one heard them.",
+        "A scream echoed through the #NounLocation# as the #NounGroup# #VerbMotion# in all directions, panic setting in."
+    ],
+    "VerbCreation": [
+        "created", "forged", "built", "formed", "constructed"
+    ],
+    "AdvAll": [
+        "quickly", "silently", "unexpectedly", "frantically"
+    ],
+    "Uncategorized": [
+        "ghost", "darkness", "curse", "ritual"
+    ],
+    "NounTime": [
+        "midnight", "dawn", "twilight", "noon", "sunset"
+    ],
+    "NounPerson": [
+        "man", "woman", "child", "stranger", "ghost", "figure"
+    ],
+    "AdjAll": [
+        "rusted", "decaying", "cold", "haunted", "ancient", "broken"
+    ],
+    "VerbPossession": [
+        "held", "grasped", "clutched", "took", "seized"
+    ],
+    "VerbCognition": [
+        "understood", "comprehended", "realized", "discovered"
+    ],
+    "NounGroup": [
+        "shadows", "figures", "ghosts", "entities", "specters", "monsters"
+    ],
+    "NounSubstance": [
+        "blood", "dust", "fog", "moss", "mold", "smoke"
+    ],
+    "NounState": [
+        "darkness", "silence", "chaos", "stillness"
+    ],
+    "NounLocation": [
+        "dark forest", "abandoned house", "old cemetery", "forgotten alley", "creepy mansion", "deep cave"
+    ],
+    "NounQuantity": [
+        "few", "many", "several", "countless"
+    ],
+    "NounCommunication": [
+        "whisper", "screech", "cry", "shout", "murmur", "moan"
+    ],
+    "VerbCommunication": [
+        "screamed", "whispered", "yelled", "begged", "shouted"
+    ],
+    "VerbChange": [
+        "twisted", "distorted", "transformed", "changed", "morphed"
+    ],
+    "NounAct": [
+        "sacrifice", "ritual", "summoning", "curse", "incantation"
+    ],
+    "NounArtifact": [
+        "knife", "book", "statue", "ring", "amulet", "mask"
+    ],
+    "NounFeeling": [
+        "fear", "dread", "panic", "chill", "terror", "anxiety"
+    ],
+    "VerbSocial": [
+        "shouted", "whispered", "gestured", "called", "reached out"
+    ],
+    "NounAttribute": [
+        "strength", "fear", "rage", "despair"
+    ],
+    "NounAnimal": [
+        "dog", "cat", "rat", "bat", "crow", "wolf"
+    ],
+    "VerbMotion": [
+        "ran", "staggered", "crept", "fled", "sprinted", "lurched"
+    ],
+    "NounCognition": [
+        "memory", "thought", "idea", "vision"
+    ],
+    "VerbStative": [
+        "seemed", "appeared", "felt", "looked", "heard"
+    ],
+    "VerbPerception": [
+        "saw", "heard", "felt", "sensed", "noticed"
+    ],
+    "NounBody": [
+        "hands", "eyes", "mouth", "skin", "teeth", "legs"
+    ],
+    "NounRelation": [
+        "friend", "foe", "partner", "enemy", "stranger"
+    ],
+    "NounEvent": [
+        "explosion", "scream", "exploration", "disappearance", "collision"
+    ],
+    "NounTops": [
+        "head", "hands", "feet", "eyes"
+    ],
+    "AdjPert": [
+        "creepy", "weird", "unsettling", "mysterious", "eerie"
+    ],
+    "NounObject": [
+        "sword", "mirror", "shard", "key", "coin", "journal"
+    ],
+    "NounPlant": [
+        "vine", "moss", "flower", "thorn", "root"
+    ],
+    "VerbEmotion": [
+        "screamed", "cried", "laughed", "sobbed"
+    ],
+    "VerbContact": [
+        "touched", "grabbed", "pulled", "struck"
+    ],
+    "NounFood": [
+        "bread", "meat", "fruit", "water", "soup"
+    ],
+    "NounPossession": [
+        "weapon", "ring", "key", "book", "amulet"
+    ],
+    "VerbBody": [
+        "moved", "trembled", "shook", "staggered"
+    ],
+    "NounPhenomenon": [
+        "eclipse", "thunder", "storm", "flood", "earthquake"
+    ],
+    "NounShape": [
+        "circle", "triangle", "square", "line", "rectangle"
+    ],
+    "NounProcess": [
+        "decay", "growth", "change", "transformation"
+    ],
+    "VerbConsumption": [
+        "ate", "devoured", "drank", "consumed"
+    ],
+    "VerbCompetition": [
+        "fought", "competed", "struggled", "raced"
+    ],
+    "NounMotive": [
+        "revenge", "fear", "greed", "love", "hate"
+    ],
+    "VerbWeather": [
+        "rained", "stormed", "snowed", "thundered"
+    ]
+}

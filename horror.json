@@ -8,7 +8,7 @@
     ],
     "sentence2": [
       "Suddenly, #NounTime# struck, and #NounPerson# #VerbPossession# the #NounObject#.",
-      "#NounPerson# #VerbCommunication# in #CounCommunication#, but no one heard them."
+      "#NounPerson# #VerbCommunication# in #NounCommunication#, but no one heard them."
     ],
     "NounPerson": [
       "man", "woman", "child", "stranger", "ghost", "victim", "figure"
