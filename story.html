@@ -32,15 +32,15 @@
     <script>
         $(document).ready(function() {
             // Load the Tracery grammar JSON file using jQuery
-            $.getJSON("filtered_categorized_words.json", function(data) {
+            $.getJSON("horror.json", function(data) {
                 // Ensure that the JSON structure contains the "origin" rule
                 let grammar = tracery.createGrammar(data);
 
                 function generateText() {
                     // Use the "origin" rule to generate a sentence
-                    let filtered_categorized_words = grammar.flatten("#origin#");
+                    let horror = grammar.flatten("#origin#");
                     // Display the generated story in the #output div
-                    $("#output").html(filtered_categorized_words);
+                    $("#output").html(horror);
                 }
 
                 // Generate the story immediately
