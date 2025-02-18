@@ -187,8 +187,8 @@
                         setTimeout(function() {
                             $("#jumpscareContainer").html(""); // Clear the image
                         }, 1000); // Clear after it's gone
+                        triggerJumpscare();
                     }, Math.random() * 1000 + 5000); // Random delay between 10s to 15s
-                    triggerJumpscare();
                 }
             });
         });
