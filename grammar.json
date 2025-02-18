@@ -21,7 +21,7 @@
         "#NounPerson# #VerbCognition# in the #NounLocation# when they suddenly felt a cold #NounSubstance# brush against their #NounBody#.",
         "#NounPerson# #VerbMotion# past the #NounObject#, but it #VerbChange# as they moved closer.",
         "In the middle of the night, #NounPerson# #VerbPerception# something move in the #NounLocation# where there should have been no one.",
-        "A #NounAnimal# suddenly #VerbMotion# from the shadows, its eyes glowing a haunting #NounColor#."
+        "A #NounAnimal# suddenly #VerbMotion# from the shadows, its #NounBody# haunting"
     ],
     "sentence2": [
         "Suddenly, #NounTime# struck, and #NounPerson# #VerbPossession# the #NounObject#.",
@@ -1519,7 +1519,6 @@
         "torturer",
         "suspect",
         "adversarys",
-        "retard",
         "adversary",
         "austrian",
         "invader",
@@ -2120,7 +2119,6 @@
         "masons",
         "clerks",
         "jailer",
-        "slut",
         "trusty",
         "prisoners",
         "shopkeeper",
@@ -4217,7 +4215,6 @@
         "classes",
         "professions",
         "rich",
-        "retarded",
         "enemies",
         "clump",
         "cast",
