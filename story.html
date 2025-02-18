@@ -107,15 +107,31 @@
             margin-left: auto;
             margin-right: auto;
         }
+/* CSS for rotating and falling petals */
+@keyframes rotateFall {
+    0% {
+        transform: rotate(0deg) translateY(-100px); /* Start above */
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg) translateY(100vh); /* Fall to the bottom */
+        opacity: 0;
+    }
+}
 
-        /* SVG Holder for Image Generation */
-        #svgImage {
-            margin-top: 50px;
-            width: 80%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* Apply animation to the blood petal */
+.blood-petal {
+    animation: rotateFall 3s ease-in-out infinite;
+    position: absolute;
+}
+
+/* Add randomness for each petal */
+#svgImage svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotateFall 4s ease-in-out infinite;
+}
 
         /* Blood drips effect (to enhance the horror feel) */
         .blood-drip {
@@ -192,7 +208,7 @@
     </style>
 </head>
 <body>
-    <h1>Spooky Wooky Two Sentence Horry Stories</h1>
+    <h1>Spooky Wooky Two Sentence Horror Stories</h1>
     <p>Feel the terror, the dread, the unknown...</p>
     
     <div class="container">
@@ -221,12 +237,22 @@
                     // Display the generated story in the #output div
                     $("#output").html(generatedStory);
                 }
+            
                 function generateSVG() {
-                    // Use the "image" rule to generate an SVG image
-                    let generatedSVG = grammar.flatten("#image#");
-                    // Display the generated SVG image in the #svgImage div
-                    $("#svgImage").html(generatedSVG);
+                // Use the "image" rule to generate an SVG image
+                let generatedSVG = grammar.flatten("#image#");
+                
+                // Generate random positions and append the SVG elements
+                for (let i = 0; i < 5; i++) { // Create 5 petals for example
+                    let petal = $("<div>").html(generatedSVG).css({
+                        position: "absolute",
+                        top: `${Math.random() * 100}px`, // Random starting position
+                        left: `${Math.random() * 100}%`, // Random horizontal position
+                        animationDelay: `${Math.random() * 2}s` // Randomize animation delay
+                    });
+                    $("#svgImage").append(petal);
                 }
+            }
 
                 function generateJumpscare() {
                   // Use the "jumpscare" rule to generate a random jumpscare image
