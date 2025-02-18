@@ -1,6 +1,6 @@
 {
     "origin": [
-        "#image# #sentence1# #sentence2#"
+        "#jumpscare# #image# #sentence1# #sentence2#"
     ],
     "image": [ 
       "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path d=\"M10 50 Q 30 30, 50 40 Q 70 50, 50 60 Q 30 70, 10 50 Z\" fill=\"darkred\"/></svg>"
